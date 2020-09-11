@@ -1,0 +1,38 @@
+body {
+    background-color: #ffffff;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px #c7c7c7;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color: #3c6e7F;
+    font-weight: bold;
+}
+
+.button-color {
+    background-color: #3c6e71;
+    color: white;
+    font-size: large;
+}
+
+.card {
+    background-color: #f5f5f5;
+}
+
+.nav-link {
+    color: #3c6e71;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #eceff1;
+    text-align: center;
+}
