@@ -120,7 +120,6 @@ media/
 */__pycache__/
 
 ebdjango/__pycache__/__init__.cpython-38.pyc
-db.sqlite3
 # Ignore Django Migrations in Development if you are working on team
 
 # Only for Development only
