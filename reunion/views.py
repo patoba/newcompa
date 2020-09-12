@@ -12,3 +12,6 @@ def feedback(request):
 
 def crear_reunion(request):
     return render(request, 'reunion/crear_reunion.html')
+
+def historial_reuniones(request):
+    return render(request, 'reunion/historial_reuniones.html')
