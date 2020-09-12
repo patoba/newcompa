@@ -7,7 +7,7 @@
     <br>
     <h1>Registro</h1>
 
-    <form method="post" class="form-group">
+    <form method="post" enctype="multipart/form-data"  class="form-group">
         {% csrf_token %}
         {{form|crispy}}
         <br>

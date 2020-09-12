@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     'general',
     'usuario',
-    'reunion',
+    # 'reunion',
 ]
 
 MIDDLEWARE = [

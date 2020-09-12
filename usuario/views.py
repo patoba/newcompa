@@ -5,7 +5,7 @@ from .forms import RegisterForm
 # Create your views here.
 def registro(response):
     if response.method == "POST":
-        form = RegisterForm(response.POST)
+        form = RegisterForm(response.POST, response.FILES)
         if form.is_valid():
             form.save()
             return redirect("/")
