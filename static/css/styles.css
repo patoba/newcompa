@@ -1,13 +1,24 @@
 body {
     background-color: #ffffff;
+    margin-top:6rem;
+    position:absolute;
+    top:0; left:0; bottom:0;right:0;
 }
 
 nav {
     background-color: white;
     box-shadow: 0px 1px 3px 0px #c7c7c7;
     z-index: 1;
-    height:3.5rem;
 }
+
+.logo-image {
+    height:3.5rem;
+    margin-right: 1.5rem;
+    margin-left: 0rem;
+    margin-bottom: -1rem;
+    margin-top: -0.2rem;
+}
+
 
 .sticky {
   position: fixed;
@@ -46,8 +57,7 @@ nav {
 .footer {
     height: 3rem;
     width: 100%;
-    line-height: 60px;
-    margin-top: 3rem;
+    line-height: 3rem;
     background-color: #eceff1;
     text-align: center;
 }
@@ -57,8 +67,11 @@ nav {
     bottom: auto;
 }
 
-body{
-    margin-top:3.5rem;
-    position:absolute;
-    top:0; left:0; bottom:0;right:0;
+.main-content{
+    min-height: -webkit-calc(100% - 5rem);
+    min-height:    -moz-calc(100% - 5rem);
+    min-height:         calc(100% - 5rem);
+}
+.footer-pad{
+    height: 2rem;
 }
