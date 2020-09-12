@@ -1,0 +1,70 @@
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    background-color: #fcfcfc;
+}
+
+.meeting-title {
+    font-weight: bold;
+    color: #5d5d5d;
+    font-size: 7vh;
+}
+
+.circular-landscape {
+    display: inline-block;
+    position: relative;
+    width: 15vh;
+    height: 15vh;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 1px 7px 18px #888888;
+}
+
+.circular-landscape img {
+    width: auto;
+    height: 100%;
+    margin-right: 50px;
+}
+
+.btn-danger {
+    background-color: white;
+    color: #3c6e71;
+}
+
+.btn-success {
+    background-color: white;
+    color: #3c6e71;
+}
+
+.h1-main {
+    color: #3c6e7F;
+}
+
+.basic-elements {
+    font-size: 2.3vh;
+    font-weight: bold;
+    font-style: normal;
+    color: #5d5d5d;
+}
+
+.numOfPeople {
+    font-size: 6.3vh;
+    font-weight: bold;
+    color: #3c6e71;
+}
+
+.people {
+    font-size: 1.8vh;
+    font-style: normal;
+    color: #9c9c9c;
+    font-weight: bold;
+}
+
+.divider {
+    height: 3vh;
+}
+
+.circular-image {
+    border-radius: 50%;
+}

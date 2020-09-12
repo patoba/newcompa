@@ -1,0 +1,63 @@
+{% extends 'general/base.html' %}
+{% load static%}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/reunion.css' %}">
+<div class="container mt-5">
+  <div style="text-align: center;">
+    <h1 class="meeting-title">Reuniones</h1>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="row">
+            <p></p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="circular-landscape">
+                <img src="{% static 'img/place.PNG' %}">
+              </div>
+              <p class="basic-elements">Las Islas</p>
+            </div>
+            <div class="col">
+              <div class="circular-landscape">
+                <!--<img src="https://wallpaperaccess.com/full/1673284.jpg">-->
+                <img src="{% static 'img/time.PNG' %}">
+              </div>
+              <p class="basic-elements">13/09/2020</p>
+              <p class="basic-elements">15:30</p>
+            </div>
+            <div class="col">
+              <div class="circular-landscape">
+                <img src="{% static 'img/activity.PNG' %}">
+              </div>
+              <p class="basic-elements">Platicar</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+              <div class="divider"></div>
+              <p class="numOfPeople">2/4</span>
+              <p class="people">Participantes</p>
+            </div>
+            <div class="col-sm-4"></div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn" style="background-color: white;color: red;">Siguiente</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn" style="background-color: white; color: #3c6e71;">Unirme</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

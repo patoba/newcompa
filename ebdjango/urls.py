@@ -24,5 +24,6 @@ urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^', include('general.urls')), 
    url(r'^', include('usuario.urls')),
+   url(r'^', include('reunion.urls')),
    path("", include("django.contrib.auth.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
