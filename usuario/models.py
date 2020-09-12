@@ -22,6 +22,7 @@ class Usuario(AbstractUser):
         swappable = 'AUTH_USER_MODEL'
 
 # Create your models here.
+
 class Pregunta(models.Model):
     id = models.IntegerField(auto_created=True, primary_key=True)
     texto = models.CharField(max_length=100)
@@ -35,4 +36,5 @@ class Respuesta_Usuario(models.Model):
     id = models.IntegerField(auto_created=True, primary_key=True)
     respuesta = models.ForeignKey(Respuesta, on_delete=models.CASCADE)
     usuario = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    imagen = models.ImageField()
 

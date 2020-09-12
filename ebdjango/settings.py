@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     'general',
     'usuario',
+    'reunion',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'usuario.Usuario'
