@@ -1,0 +1,79 @@
+{% extends 'general/base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+    <div class="container mt-3">
+      <div class="d-flex justify-content-center">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h3 class="card-title">Sobre tu reunión...</h3>
+              <div class="media">
+                <div class="media-body">
+                  <h5 class="mt-2"><i class="fas fa-map-marker-alt"></i> &nbsp; Lugar</h5>
+                  <div style="color:#606060">Las Islas</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-body">
+                  <h5 class="mt-2"><i class="fas fa-clock"></i> &nbsp; Hora</h5>
+                  <div style="color:#606060">11/09/2020, 17:30 pm</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-body">
+                  <h5 class="mt-2"><i class="fas fa-running"></i> &nbsp; Actividad</h5>
+                  <div style="color:#606060">Platicar bajo la jacaranda</div>
+                </div>
+              </div>
+            
+              <hr>
+              <form>
+                <div class="form-group">
+                  <label for="inputRating">¿Qué tal te pareció?</label>
+                  <div class='rating-stars text-center'>
+                    <ul id='stars'>
+                      <li class='star' title='Muy Mal' data-value='1'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Mal' data-value='2'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Regular' data-value='3'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Bien' data-value='4'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Muy Bien' data-value='5'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <small id="ratingHelp" class="form-text text-muted">Esta calificación solo la puedes ver tú.</small>
+                </div>
+                <hr>
+                <div class="form-group">
+                  <div class="d-flex justify-content-center">
+                    <a style="text-align: center;" role="button" class="btn btn-danger" data-toggle="collapse" href="#collapseHelp" aria-pressed="false" aria-expanded="false" aria-controls="collapseHelp">
+                    Hubo un problema
+                    </a>
+                  </div>
+                  <div class="collapse" id="collapseHelp">
+                    <div class="card-body">
+                      <textarea class="form-control" id="helpArea" rows="3"></textarea>
+                      <small id="helpHelp" class="form-text text-muted">Si tuviste un problema con la reunión, por favor descríbelo y te contactaremos.</small>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn button-color btn-block", style="color:white">Terminar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/feedback.js' %}"></script>
+{% endblock %}

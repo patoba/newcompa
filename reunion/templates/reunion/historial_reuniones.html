@@ -1,0 +1,76 @@
+{% extends 'general/base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/detalle_reunion.css' %}">
+
+<div class="container mt-5">
+    
+    <h1>Reuniones anteriores</h1>
+    <hr />
+
+    <div class="card-deck">
+      <div class="card detail-card">
+        <img src="https://static.vix.com/es/sites/default/files/styles/16x9/public/imj/elgranchef/R/Receta-de-pan-para-hamburguesas-1.jpg?itok=ni9XOfVh" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-calendar-minus"></i> Comer en ciencias</h5>
+          <hr />
+          <p class="card-text"><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> La Tía Ali</p>
+          <p class="card-text"><i class="fas fa-clock"></i> <strong>Fecha/Hora:</strong> 28 de agosto del 2020, 15:00 hrs.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <strong>Calificación:</strong>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </small>
+        </div>
+      </div>
+
+      <div class="card detail-card">
+        <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/09/10/15997483923738.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Llamada para jugar Among Us</h5>
+          <hr />
+          <p class="card-text"><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Online </p>
+          <p class="card-text"><i class="fas fa-clock"></i> <strong>Fecha/Hora:</strong> 26 de agosto del 2020, 22:00 hrs.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <strong>Calificación:</strong>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </small>
+        </div>
+      </div>
+
+      <div class="card detail-card">
+        <img src="https://okdiario.com/img/2019/01/21/como-organizar-un-paseo-en-bicicleta-pasos-620x349.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Paseo en bicicleta</h5>
+          <hr />
+          <p class="card-text"><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Estadio Olímpico </p>
+          <p class="card-text"><i class="fas fa-clock"></i> <strong>Fecha/Hora:</strong> 22 de agosto del 2020, 10:00 hrs.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <strong>Calificación:</strong>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

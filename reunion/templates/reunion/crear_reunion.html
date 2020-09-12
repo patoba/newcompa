@@ -1,0 +1,149 @@
+{% extends 'general/base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/crear_reunion.css' %}">
+
+<p style="margin-bottom:1em;"></p>
+
+<h1>Crea una reunión</h1>
+
+<p style="margin-bottom:1em;"></p>
+
+
+<!-- <div class="jumbotron bg-info">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-addon primary"></span>
+      <label class="input-group-text" for="inputGroupSelect01"> Lugar &nbsp; <i class="fas fa-map-marker-alt"></i></label>
+    </div>
+    <select class="custom-select bg-light" id="inputGroupSelect01">
+      <option selected>Escoge...</option>
+      <option value="1">Las Islas</option>
+      <option value="2">Biblioteca Central</option>
+      <option value="3">Metro CU</option>
+    </select>
+  </div>
+</div> -->
+
+<div class="card mx-auto" style="max-width:40em;">
+  <div class="card-header" style="background-color: #3C6E71;">
+    
+  </div>
+  <div class="card-body">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-addon primary"></span>
+        <label class="input-group-text" for="inputGroupSelect01"> <i class="fas fa-map-marker-alt"></i> &nbsp; Lugar </label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01">
+        <option selected>Escoge...</option>
+        <option value="1">Las Islas</option>
+        <option value="2">Biblioteca Central</option>
+        <option value="3">Metro CU</option>
+        <option value="3">Prometeo</option>
+        <option value="3">Estadio Olímpico</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<p style="margin-bottom:2em;"></p>
+
+
+<!-- <div class="jumbotron bg-info">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Actividad &nbsp; <i class="fas fa-running"></i></label>
+    </div>
+    <select class="custom-select bg-light" id="inputGroupSelect01">
+      <option selected>Escoge...</option>
+      <option value="1">Cine</option>
+      <option value="2">Bicicleta</option>
+      <option value="3">Comer</option>
+      <option value="4">Tomar</option>
+      <option value="5">Comer</option>
+    </select>
+  </div>
+</div> -->
+
+<div class="card mx-auto" style="max-width:40em;">
+  <div class="card-header" style="background-color: #3C6E71;">
+    
+  </div>
+  <div class="card-body">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01"> <i class="fas fa-running"></i> &nbsp; Actividad </label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01">
+        <option selected>Escoge...</option>
+        <option value="1">Cine</option>
+        <option value="2">Bicicleta</option>
+        <option value="3">Comer</option>
+        <option value="4">Tomar</option>
+        <option value="5">Museo</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<p style="margin-bottom:2em;"></p>
+
+
+<!-- <div class="jumbotron bg-info">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text bg-light" for="inputGroupSelect01">Fecha y hora &nbsp; <i class="far fa-clock"></i></label>
+    </div>
+    <form action="/action_page.php">
+      <input type="datetime-local" id="reloj" name="reloj">
+    </form>
+  </div>
+</div> -->
+
+<div class="card mx-auto" style="max-width:40em;">
+  <div class="card-header" style="background-color: #3C6E71;">
+    
+  </div>
+  <div class="card-body">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01"><i class="far fa-clock"></i> &nbsp; Fecha y hora </label>
+      </div>
+      <form action="/action_page.php">
+        <input type="datetime-local" id="reloj" name="reloj">
+      </form>
+    </div>    
+  </div>
+</div>
+
+<p style="margin-bottom:2em;"></p>
+
+<div class="card mx-auto" style="max-width:40em;">
+  <div class="card-header" style="background-color: #3C6E71;">
+    
+  </div>
+  <div class="card-body">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01"> <i class="fas fa-users  "></i> &nbsp; # de personas </label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01">
+        <option selected>Escoge...</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<p style="margin-bottom:3em;"></p>
+
+<div class="col text-center"> 
+  <a class="btn btn-success" href="/detalle-reunion" role="button">Crear</a>
+</div>
+<script src="{% static 'js/feedback.js' %}"></script>
+
+{% endblock %}
