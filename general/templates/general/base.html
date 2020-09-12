@@ -54,11 +54,13 @@
     </ul>
   </div>
 </nav>
-
+<div class="main-content">
+  {% block content %}
+  {% endblock %}
+</div>
     
-    {% block content %}
-    {% endblock %}
-
+    
+    <div class="footer-pad"></div>
     <footer class="footer">
         Creado por &copy10F2C con ❤@MX
     </footer>
