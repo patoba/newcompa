@@ -1,25 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
-from usuario.models import Usuario
-# Create your models here.
-
-class Reunion(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
-    actividad = models.CharField(max_length=255)
-    fecha = models.DateTimeField()
-    cantidad_personas = models.IntegerField()
-
-
-class Feedback(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
-    numero_estrellas = models.IntegerField()
-    comentarios = models.CharField(max_length=255)
-
-class Usuaio_reunion(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
-    usuario_id = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    Reunion_id = models.ForeignKey(Reunion, on_delete=models.CASCADE)
-=======
 from django.contrib.auth.models import User, AbstractUser
 from django.contrib.auth import get_user_model
 from usuario.models import Usuario
@@ -53,4 +32,3 @@ class UsuarioReunion(models.Model):
     comentario = models.TextField()
     reunion_id = models.ForeignKey(Reunion, on_delete=models.CASCADE)
     usuario_id = models.ForeignKey(Usuario, on_delete=models.CASCADE)
->>>>>>> usuario
