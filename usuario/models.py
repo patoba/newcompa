@@ -9,12 +9,29 @@ GENDER_CHOICES = (
         ('O', 'OTRO')
 )
 
+FACULTY_CHOICES = (
+        ('FI', 'Facultad de Ingeniería'),
+        ('FC', 'Facultad de Ciencias'),
+        ('FCA', 'Facultad de Contaduría y Administración'),
+        ('FO', 'Facultad de Odontología'),
+        ('FA', 'Facultad de Arquitectura'),
+        ('FAD', 'Facultad de Artes y Diseño'),
+        ('FQ', 'Facultad de Química'),
+        ('FD','Facultad de Derecho'),
+        ('FCPS', 'Facultad de Ciencias Políticas y Sociales'),
+        ('FM','Facultad de Medicina'),
+        ('FE', 'Facultad de Economía'),
+        ('FMVZ','Facultad de Medicina Veterinaria y Zootecnia'),
+        ('FP','Facultad de Psicología'),
+        ('FFL', 'Facultad de Filosofía y Letras'),
+)
+
 class Usuario(AbstractUser):
     nombre = models.CharField(max_length=30)
     genero = models.CharField(max_length= 1, choices=GENDER_CHOICES)
-    correo = models.EmailField(default="patobarrero@gmail.com")
+    correo = models.EmailField()
     # otro_correo = models.EmailField()
-    facultad = models.CharField(max_length=100)
+    facultad = models.CharField(max_length=4, choices=FACULTY_CHOICES)
     fecha_nacimiento = models.DateField(null=True)
     credencial = models.ImageField()
     verificado = models.BooleanField(default=False)

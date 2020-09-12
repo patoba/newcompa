@@ -24,10 +24,6 @@ urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^', include('general.urls')), 
    url(r'^', include('usuario.urls')),
-<<<<<<< HEAD
    url(r'^', include('reunion.urls')),
-=======
-   #url(r'^', include('reunion.urls')),
->>>>>>> 2db45a64c2ddafeea39ec469082ad80a395ad1fc
    path("", include("django.contrib.auth.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

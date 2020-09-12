@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
+# from django.contrib.auth.admin import UserAdmin
 
 class RegisterForm(UserCreationForm):
 
@@ -18,4 +18,4 @@ class CustomUserAdmin(UserAdmin):
     model = Usuario
     list_display = ['email', 'username',]
 """
-admin.site.register(Usuario)
+# admin.site.register(Usuario)
