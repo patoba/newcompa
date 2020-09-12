@@ -106,9 +106,18 @@ media/
 *.pyc
 *.db
 *.pid
-ebdjango/__pycache__/*.pyc
-general/__pycache__/*.pyc
-general/migrations/__pycache__/*.pyc
+
+*.log
+
+*.pot
+
+*.pyc
+
+*/*/*/__pycache__/
+
+*/*/__pycache__/
+
+*/__pycache__/
 # Ignore Django Migrations in Development if you are working on team
 
 # Only for Development only
