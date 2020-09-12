@@ -118,6 +118,8 @@ media/
 */*/__pycache__/
 
 */__pycache__/
+
+db.sqlite3
 # Ignore Django Migrations in Development if you are working on team
 
 # Only for Development only
