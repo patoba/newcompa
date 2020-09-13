@@ -4,22 +4,22 @@ from django.contrib.auth import get_user_model
 from usuario.models import Usuario
 
 class Lugar(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
+    id = models.AutoField(primary_key=True)
     altitud = models.DecimalField(max_digits=8,decimal_places=6)
     latitud = models.DecimalField(max_digits=8,decimal_places=6)
-    imagen = models.ImageField()
+    imagen = models.CharField(max_length=500)
     descripcion = models.TextField()
     nombre = models.CharField(max_length=255)
 
 class Actividad(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
+    id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=255)
-    imagen = models.ImageField()
+    imagen = models.CharField(max_length=500)
     descripcion = models.TextField()
 
 
 class Reunion(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
+    id = models.AutoField(primary_key=True)
     fecha = models.DateTimeField()
     cantidad_personas = models.IntegerField()
     lugar_id = models.ForeignKey(Lugar, on_delete=models.CASCADE)
@@ -27,7 +27,7 @@ class Reunion(models.Model):
     topico = models.CharField(max_length=255)
 
 class UsuarioReunion(models.Model):
-    id = models.IntegerField(auto_created=True, primary_key=True)
+    id = models.AutoField(primary_key=True)
     num_estrellas = models.IntegerField()
     comentario = models.TextField()
     reunion_id = models.ForeignKey(Reunion, on_delete=models.CASCADE)

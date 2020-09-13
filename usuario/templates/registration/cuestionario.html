@@ -1,0 +1,19 @@
+{% extends 'general/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container section">
+    <br>
+    <h1>Cuestionario</h1>
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {% for form in forms %}
+            {{form|crispy}}
+        {% endfor %}
+        <br>
+        <button class="btn btn-success" type="submit" name="action">
+            Aceptar
+        </button>
+    </form>
+</div>
+{% endblock %}
