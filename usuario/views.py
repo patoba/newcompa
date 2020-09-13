@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm, PreguntaForm
-from .models import Pregunta
+from .models import Pregunta, Respuesta
 # from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
@@ -15,7 +15,9 @@ def registro(response):
     return render(response, "registration/registro.html", {"form":form})
 
 def cuestionario(response):
-    preguntas = Pregunta.objects.all()
-    cuestionario = [PreguntaForm(pregunta) for pregunta in preguntas]
-    return render(response, "registration/cuestionario.html", {"forms":cuestionario})
+    info = {
+        "preguntas":Pregunta.objects.all(),
+        "respuestas":Respuesta.objects.all()#[Respuesta.objects.filter(pregunta=pregunta) for pregunta in Pregunta.objects.all()]
+    }
+    return render(response, "registration/cuestionario.html", info)
 

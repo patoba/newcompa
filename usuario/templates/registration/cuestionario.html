@@ -6,11 +6,16 @@
     <br>
     <h1>Cuestionario</h1>
     <form method="POST" class="form-group">
-        {% csrf_token %}
-        {% for form in forms %}
-            {{form|crispy}}
+        {% for pregunta in preguntas %} 
+            <p>{{pregunta.id}}. {{pregunta.texto}}</p>
+
+            {% for respuesta in pregunta.respuesta_set.all  %} 
+                <input type="radio" id={{respuesta.id}} name="{{pregunta.id}}" value={{respuesta.id}}>
+                <label for={{respuesta.id}}>{{respuesta.texto}}</label><br>
+            {% endfor %}
+            <br>
         {% endfor %}
-        <br>
+        
         <button class="btn btn-success" type="submit" name="action">
             Aceptar
         </button>
